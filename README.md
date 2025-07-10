@@ -6,10 +6,11 @@ A simple Python script to cull RAW files based on deleted JPEG files in a direct
 
 ## How To Use (with JPEGs and your RAW format of choice)
 1. Cull compressed photos by reviewing JPEGs and deleting (e.g. sending to Recycle Bin/Trash) undesired JPEGs.
-2. Put the script `CullRawByJPG.py` into your desired directory containing RAW and JPEG files.
-3. If your RAW format of choice is `*.CR3`, skip to Step 5. Otherwise, open `CullRawByJPG.py` in a text editor or IDE.
-4. Change the `raw_type` variable on line 4 to your desired format, in uppercase, including the delimiter (`.`), according to the examples given.
-5. Run the script by opening a Windows Command Prompt or macOS Terminal window in your desired directory, then running `python3 CullRawByJPG.py`.
+2. Download the source code from [this link](https://github.com/williamli9300/CullRawByJPG/archive/refs/heads/main.zip) or from `<> Code` > `Download Zip` on the project front page, then extract the archive.
+3. Copy the script `CullRawByJPG.py` into your desired directory containing RAW and JPEG files.
+4. If your RAW format of choice is `*.CR3`, skip to Step 6. Otherwise, open `CullRawByJPG.py` in a text editor or IDE.
+5. Change the `raw_type` variable on line 4 to your desired format, in uppercase, including the delimiter (`.`), according to the examples given.
+6. Run the script by opening a Windows Command Prompt or macOS Terminal window in your desired directory, then running `python3 CullRawByJPG.py`.
 
 ## Using Other Compressed Formats
 1. Open `CullRawByJPG.py` in a text editor or IDE.
