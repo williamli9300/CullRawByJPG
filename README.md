@@ -18,7 +18,7 @@ A simple Python script to cull RAW files based on deleted JPEG files in a direct
 
 ## Compatibility, Dependencies, & Requirements
 - Written in and requires Python 3.
-- Requires the python [Send2Trash library](https://pypi.org/project/Send2Trash/). Install using `pip install Send2Trash` in Command Prompt or Terminal, or by following instructions given on the project page.
+- Requires the python [Send2Trash library](https://pypi.org/project/Send2Trash/). Install using `python3 -m pip install Send2Trash` in Command Prompt or Terminal, or by following instructions given on the project page.
 - Works with extensions that are both UPPERCASE or lowercase (e.g. `.CR3` and `.cr3`).
 - Works with JPEGs using both `.JPG`/`.jpg` and `.JPEG`/`.jpeg` extensions.
 - In theory, works on both Windows and macOS, but only tested on Windows 11.
