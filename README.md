@@ -1,8 +1,9 @@
 # CullRawByJPG
 
-#### by Will Li | [https://github.com/williamli9300/CullRawByJPG/](https://github.com/williamli9300/CullRawByJPG/) | v0.0.1
+#### by Will Li | [https://github.com/williamli9300/CullRawByJPG/](https://github.com/williamli9300/CullRawByJPG/) | v0.0.2
 
 A simple Python script to cull RAW files based on deleted JPEG files in a directory.
+You can change the verbosity (i.e., is the name of every recycled file printed to console, or only the number of deleted files) by changing the value of `verbose` on line 8 to `True` or `False`
 
 ## How To Use (with JPEGs and your RAW format of choice)
 1. Cull compressed photos by reviewing JPEGs and deleting (e.g. sending to Recycle Bin/Trash) undesired JPEGs.
@@ -18,8 +19,8 @@ A simple Python script to cull RAW files based on deleted JPEG files in a direct
 
 ## Compatibility, Dependencies, & Requirements
 - Written in and requires Python 3.
-- Requires the python [Send2Trash library](https://pypi.org/project/Send2Trash/). Install using `python3 -m pip install Send2Trash` in Command Prompt or Terminal, or by following instructions given on the project page.
+- Requires the Python [Send2Trash library](https://pypi.org/project/Send2Trash/). Install using `python3 -m pip install Send2Trash` in Command Prompt or Terminal, or by following instructions given on the project page.
 - Works with extensions that are both UPPERCASE or lowercase (e.g. `.CR3` and `.cr3`).
 - Works with JPEGs using both `.JPG`/`.jpg` and `.JPEG`/`.jpeg` extensions.
-- In theory, works on both Windows and macOS, but only tested on Windows 11.
+- In theory, this script works on both Windows and macOS, but only tested on Windows 11.
 - A folder containing RAW and JPEG files with the same names (minus extension). The script will search for RAW files without a correspondingly named JPEG file.
