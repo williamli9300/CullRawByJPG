@@ -5,6 +5,8 @@ raw_type = ".CR3" # change as required: uppercase ".CR2" ".CR3" ".NEF" ".DNG" et
 compressed_type_1 = ".JPG" # change as required: uppercase ".PNG", ".HEIF", etc.
 compressed_type_2 = ".JPEG" # change as required (as above). if no second spelling/type, keep as ".JPEG".
 
+verbose = True # True prints name of every file deleted to console. False only prints number of files deleted.
+
 # create list of all jpegs
 def create_jpeg_list():
     jpeg_list = []
@@ -40,17 +42,20 @@ def create_culled_list(jpeg_list, raw_list, raw_type):
     return culled_list
 
 #send elements in culled_list to recycle bin
-def recycle(culled_list):
+def recycle(culled_list, verbosity):
     files_list = ["./" + file for file in culled_list]
+    culled_counter = 0
     for file in files_list:
         send2trash(file)
-        print(file + " was sent to trash.)
-    print("Done.")
+        culled_counter += 1
+        if verbosity == True:
+            print(file + " was sent to trash.")
+    print("Culling finished. " + str(culled_counter) + " Raw files were sent to trash.")
 
 def main():
     jpeg_list = create_jpeg_list()
     raw_list = create_raw_list(raw_type)
     culled_list = create_culled_list(jpeg_list, raw_list, raw_type)
-    recycle(culled_list)
+    recycle(culled_list, verbose)
 
 main()
