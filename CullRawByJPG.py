@@ -50,7 +50,7 @@ def create_culled_list(jpeg_list, raw_list, raw_type):
     return culled_list
 
 #send elements in culled_list to recycle bin
-def recycle(culled_list, verbosity):
+def recycle(culled_list, number_to_delete, verbosity):
     start = round(time.time(), 2)
     end = 0
     print("Recycling...")
@@ -71,7 +71,7 @@ def recycle(culled_list, verbosity):
                 #print(duration)
                 files_speed = round((culled_counter / duration), 1)
                 data_speed = round((size_counter / duration), 1)
-                print(str(culled_counter) + " files deleted (speed: " + str(files_speed) + " files/sec, " + str(data_speed) + " MiB/sec)...")
+                print(str(culled_counter) + " of " + str(number_to_delete) + " files deleted (speed: " + str(files_speed) + " files/sec, " + str(data_speed) + " MiB/sec)...")
     print("Culling finished. " + str(culled_counter) + " RAW files (" + str(round(size_counter, 2)) + " MiB) were sent to trash.")
 
 def main():
@@ -79,7 +79,8 @@ def main():
     jpeg_list = create_jpeg_list()
     raw_list = create_raw_list(raw_type)
     culled_list = create_culled_list(jpeg_list, raw_list, raw_type)
-    culled_counter = recycle(culled_list, verbose)
+    number_to_delete = len(raw_list) - len(jpeg_list)
+    culled_counter = recycle(culled_list, number_to_delete, verbose)
     master_end = round(time.time(), 4)
     total_time = master_end - master_start
     print("Total time elapsed: " + str(round(total_time, 2)) + " seconds.")
