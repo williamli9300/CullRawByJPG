@@ -1,4 +1,4 @@
-# CullRawByJPG.py | version 0.0.3 | https://github.com/williamli9300/CullRawByJPG
+# CullRawByJPG.py | version 0.1.0 | https://github.com/williamli9300/CullRawByJPG
 
 import os
 import time
